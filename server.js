@@ -40,6 +40,11 @@ app.get('/', async function (request, response) {
    response.render('index.liquid')
 })
 
+// details pagina
+app.get('/details', async function (request, response) {
+  response.render('details.liquid')
+})
+
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
 app.post('/', async function (request, response) {
@@ -47,6 +52,7 @@ app.post('/', async function (request, response) {
   // Er is nog geen afhandeling van een POST, dus stuur de bezoeker terug naar /
   response.redirect(303, '/')
 })
+
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000, als dit ergens gehost wordt, is het waarschijnlijk poort 80
