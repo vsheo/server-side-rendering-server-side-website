@@ -93,4 +93,26 @@ header {
             right: 6em;
         }
     }
+
+    .container-gift {
+        background-color: var(--background-secondary);
+        border-radius: 20px;
+
+        .article-gift {
+            background-color: var(--background-primary);
+            border: 2px solid black;
+            width: min-content;
+
+            .img-background {
+                width: 21.5em;
+            }
+
+            .img-reviewer {
+                &:nth-of-type(3) {
+                    position: relative;
+                    right: 3em;
+                }
+            }
+        }
+    }
 }
