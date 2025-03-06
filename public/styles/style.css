@@ -37,6 +37,32 @@ header {
     }
 }
 
-.search-bar {
+.index-main {
+    .search-bar {
+        display: flex;
+        align-items: center;
 
+        .svg-mic {
+            position: relative;
+            left: 3em;
+            bottom: 3px;
+        }
+
+        input {
+            padding: 2.5em 1em;
+            width: 35em;
+            border-radius: 3.5em;
+            border: 2px solid #C9C9C9;
+
+            &::placeholder {
+                padding-left: 2em;
+                font-size: var(--fs-button-s);
+            }
+        }
+
+        button {
+            position: relative;
+            right: 6em;
+        }
+    }
 }
