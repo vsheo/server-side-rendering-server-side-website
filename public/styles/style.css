@@ -18,7 +18,7 @@ header {
         background-color: var(--background-dark);
         color: var(--text-highlight);
         padding: 0.7em 1em;
-        font-size: var(--fs-button-s);
+        font-size: var(--fs-s);
 
         svg {
             margin-left: 0.5em;
@@ -56,11 +56,39 @@ header {
 
             &::placeholder {
                 padding-left: 2em;
-                font-size: var(--fs-button-s);
+                font-size: var(--fs-s);
             }
         }
 
         button {
+            position: relative;
+            right: 6em;
+        }
+    }
+
+    .pictures-reviewers {
+        display: flex;
+        align-items: center;
+
+        img {
+            &:nth-of-type(2) {
+                position: relative;
+                right: 3em;
+            }
+
+            &:nth-of-type(3) {
+                position: relative;
+                right: 6em;
+            }
+        }
+
+        .svg-more-reviews {
+            position: relative;
+            right: 9em;
+        }
+
+        span {
+            font-size: var(--fs-s);
             position: relative;
             right: 6em;
         }
