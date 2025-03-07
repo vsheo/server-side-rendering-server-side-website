@@ -99,18 +99,77 @@ header {
         border-radius: 20px;
 
         .article-gift {
-            background-color: var(--background-primary);
-            border: 2px solid black;
-            width: min-content;
+            display:grid;
+            grid-template-rows: min-content min-content 5em;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+              "img img"
+              "title title"
+              "reviews given"
+            ;            
+
+            border: 1px solid black;
+            background-color: white;
+            width: 23.5em;
 
             .img-background {
-                width: 21.5em;
+                grid-area: img;
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+                margin-top: 0.5em;
+            }
+
+            .bookmark-add {
+                grid-area: img;
+                justify-self:end;
+                align-self:start;
+                margin: 1em;
+                width: 75px;
+                height: 75px;
+            }
+
+            .gift-title {
+                grid-area: title;
+                margin: .5em .5em;
+            }
+
+            .img-reviewer, .icon-gifts-given {
+                display: flex;
+                align-self: center;
+                justify-self: start;
             }
 
             .img-reviewer {
-                &:nth-of-type(3) {
-                    position: relative;
-                    right: 3em;
+                grid-area: reviews;
+                scale: 0.7;
+
+                &:nth-of-type(2) {
+                    margin-left: 1.5em;
+                    z-index: 2;
+                }
+            }
+
+            .icon-gifts-given {
+                grid-area: given;
+                margin-left: 2.5em;
+            }
+
+            span {
+                display: flex;
+                align-self: center;
+                justify-self: end;
+                text-wrap: nowrap;
+
+                &:nth-of-type(1) {
+                    grid-area: reviews;
+                    margin-left: 0.5em;
+                }
+
+                &:nth-of-type(2) {
+                    grid-area: given;
+                    margin-right: 2em;
                 }
             }
         }
