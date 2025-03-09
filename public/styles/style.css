@@ -98,82 +98,6 @@ header {
         background-color: var(--background-secondary);
         border-radius: 20px;
 
-        .article-gift {
-            display:grid;
-            grid-template-rows: min-content min-content 5em;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas:
-              "img img"
-              "title title"
-              "reviews given"
-            ;            
-
-            border: 1px solid black;
-            background-color: white;
-            width: 23.5em;
-
-            .img-background {
-                grid-area: img;
-                object-fit: cover;
-                object-position: center;
-                width: 100%;
-                height: 100%;
-                margin-top: 0.5em;
-            }
-
-            .bookmark-add {
-                grid-area: img;
-                justify-self:end;
-                align-self:start;
-                margin: 1em;
-                width: 75px;
-                height: 75px;
-            }
-
-            .gift-title {
-                grid-area: title;
-                margin: .5em .5em;
-            }
-
-            .img-reviewer, .icon-gifts-given {
-                display: flex;
-                align-self: center;
-                justify-self: start;
-            }
-
-            .img-reviewer {
-                grid-area: reviews;
-                scale: 0.7;
-
-                &:nth-of-type(2) {
-                    margin-left: 1.5em;
-                    z-index: 2;
-                }
-            }
-
-            .icon-gifts-given {
-                grid-area: given;
-                margin-left: 2.5em;
-            }
-
-            span {
-                display: flex;
-                align-self: center;
-                justify-self: end;
-                text-wrap: nowrap;
-
-                &:nth-of-type(1) {
-                    grid-area: reviews;
-                    margin-left: 0.5em;
-                }
-
-                &:nth-of-type(2) {
-                    grid-area: given;
-                    margin-right: 2em;
-                }
-            }
-        }
-
         .article-login {
             display:grid;
             grid-template-rows: 0.5fr 1fr 0.5fr;
@@ -224,6 +148,83 @@ header {
                 padding: 1em;
                 border-radius: 40px;
             }
+        }
+    }
+}
+
+/* in gift container van index pagina, en ook op de details pagina */
+.article-gift {
+    display:grid;
+    grid-template-rows: min-content min-content 5em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "img img"
+      "title title"
+      "reviews given"
+    ;            
+
+    border: 1px solid black;
+    background-color: white;
+    width: 23.5em;
+
+    .img-background {
+        grid-area: img;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+        margin-top: 0.5em;
+    }
+
+    .bookmark-add {
+        grid-area: img;
+        justify-self:end;
+        align-self:start;
+        margin: 1em;
+        width: 75px;
+        height: 75px;
+    }
+
+    .gift-title {
+        grid-area: title;
+        margin: .5em .5em;
+    }
+
+    .img-reviewer, .icon-gifts-given {
+        display: flex;
+        align-self: center;
+        justify-self: start;
+    }
+
+    .img-reviewer {
+        grid-area: reviews;
+        scale: 0.7;
+
+        &:nth-of-type(2) {
+            margin-left: 1.5em;
+            z-index: 2;
+        }
+    }
+
+    .icon-gifts-given {
+        grid-area: given;
+        margin-left: 2.5em;
+    }
+
+    span {
+        display: flex;
+        align-self: center;
+        justify-self: end;
+        text-wrap: nowrap;
+
+        &:nth-of-type(1) {
+            grid-area: reviews;
+            margin-left: 0.5em;
+        }
+
+        &:nth-of-type(2) {
+            grid-area: given;
+            margin-right: 2em;
         }
     }
 }
@@ -288,8 +289,71 @@ header {
         grid-template-columns: min-content min-content min-content 1fr;
         grid-template-areas:
         "straight happy surprised surprised-text"
-        "straight happy surprised doomed-text"
-        "straight happy surprised new-text"
+        "box1 box2 box3 doomed-text"
+        "box4 box5 box6 new-text"
         ;
+        gap: 1em;
+        margin: 1em 0;
+
+        align-items: center;
+
+        .svg-box:nth-of-type(1) {
+            grid-area: box1;
+        }           
+
+        span {
+            &:nth-of-type(1) {
+                grid-area: surprised-text;
+            }
+
+            &:nth-of-type(2) {
+                grid-area: doomed-text;
+            }
+
+            &:nth-of-type(3) {
+                grid-area: new-text;
+            }
+        }
+    }
+
+    .where-to-buy {
+        border-top: 2px solid var(--background-grey);
+        border-bottom: 2px solid var(--background-grey);
+        margin-bottom: 3em;
+
+        h3{
+            margin-top: 1em;
+        }
+
+        .buy-option {
+            border: 1px solid black;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "img"
+            "title"
+            "store"
+            ;
+            width: 15.5em;
+            margin-bottom: 1em;
+
+            h3 {
+                grid-area: title;
+            }
+
+            .svg-cart {
+                grid-area: img;
+                place-self: center;
+            }
+
+            img {
+                grid-area: img;
+            }
+
+            span {
+                grid-area: store;
+                margin-top: 0.5em;
+            }
+        }
     }
 }
