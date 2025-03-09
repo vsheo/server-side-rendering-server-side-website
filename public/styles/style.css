@@ -1,6 +1,7 @@
 header {
     display: flex;
     align-items: center;
+
     h1 {
         display: inline-flex;
         flex-direction: column;
@@ -38,6 +39,10 @@ header {
 }
 
 .index-main {
+    h2 {
+        max-width: 12ch;
+    }
+
     .search-bar {
         display: flex;
         align-items: center;

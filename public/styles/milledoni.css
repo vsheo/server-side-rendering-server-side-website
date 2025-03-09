@@ -34,7 +34,7 @@ body {
     /* figma 48 */
     --fs-title-m: clamp(3rem, calc(3.3vw + 1rem), 4rem);
     /* figma 68 */
-    --fs-title-l: clamp(4.25rem, calc(4vw + 1.5rem), 5rem);
+    --fs-title-l: clamp(2.5rem, calc(4vw + 1.5rem), 4rem);
 
     --font-weight-regular: 400;
     --font-weight-light: 300;
@@ -96,7 +96,7 @@ body {
 
 
 h1 {
-    font-size: var(--fs-title-m);
+    font-size: var(--fs-title-l);
     font-weight: var(--font-weight-regular);
 }
 
