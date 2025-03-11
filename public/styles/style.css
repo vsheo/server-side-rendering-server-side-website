@@ -54,6 +54,10 @@ header {
         svg {
             fill: var(--text-highlight);
         }
+
+        &:active {
+            scale: 0.8;
+        }
     }
 
     .link-your-account {
@@ -67,6 +71,10 @@ header {
         width: 3.5em;
         aspect-ratio: 1 / 1;
         margin: 0.5em 0 0 0.5em;
+
+        &:active {
+            scale: 0.8;
+        }
     }
 }
 

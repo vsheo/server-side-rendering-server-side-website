@@ -15,14 +15,16 @@
         <img src="/images/spotter_1.png" alt="reviewer profile picture 1">
         <img src="/images/spotter_2.png" alt="reviewer profile picture 2">
         <img src="/images/spotter_3.png" alt="reviewer profile picture 3">
-        <img src="/images/spotter_1m.png" alt="reviewer profile picture 3">
+        <img src="/images/spotter_1m.png" alt="1 million more reviews picture">
         <span>Unisciti alla nostra community di spotters</span>
     </div>
 
     <!-- gifts container -->
     <section class="container-gift">
         <!-- artricle-gift uit partials -->
-        {% render 'partials/article-gift.liquid', squads: squads %}
+        {% for gift in giftData %}
+        {% render 'partials/article-gift.liquid', gift: gift %}
+        {%- endfor %}
 
         <!-- reminder to log in -->
         <article class="article-login">
