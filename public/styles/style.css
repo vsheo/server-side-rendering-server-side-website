@@ -1,10 +1,13 @@
 header {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 
     h1 {
         display: inline-flex;
         flex-direction: column;
+        margin-left: 0.5em;
 
         span {
             font-size: var(--fs-primary);
@@ -29,10 +32,14 @@ header {
     .link-your-list {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-top: 0.5em;
         border-radius: 45px;
         background-color: var(--background-dark);
         color: var(--text-highlight);
-        padding: 0.7em 1em;
+        width: 2.5em;
+        aspect-ratio: 1 / 1;
         font-size: var(--fs-s);
 
         .text-desktop {
@@ -51,12 +58,15 @@ header {
 
     .link-your-account {
         display: inline-flex;
-        align-content: center;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
         border-radius: 50%;
         box-shadow: 0px 0px 1px 1px #C9C9C9;
         border: 1px solid #C9C9C9;
-        padding: 0.9em;
-        margin-left: 0.5em;
+        width: 3.5em;
+        aspect-ratio: 1 / 1;
+        margin: 0.5em 0 0 0.5em;
     }
 }
 
@@ -185,125 +195,132 @@ header {
     display: flex;
     flex-direction: column;
 
+    .button-back {
+        margin: 2em 0 0 0.5em;
+    }
+
     .img-carousel {
         max-width: 30em;
         margin: 0.5em;
     }
 
     .side-column {
-        margin: 0 0.5em;
+        background-color: var(--background-secondary);
+        margin: 0 0.5em;   
+
+        h2 {
+            font-size: clamp(1.6rem, 5vw, 2.5rem);
+        }
+
+        .add-to-bookmark {
+            display: flex;
+            align-items: center;
+            justify-self: end;
+            background-color: var(--background-dark);
+            color: var(--text-highlight);
+            border: none;
+            padding: 0.5em;
+            border-radius: 25px;
+            font-size: var(--fs-primary);
+            margin-bottom: 1em;
+
+            svg {
+                fill: var(--text-highlight);
+                margin: 0 0.5em;
+            }
+        }
+
+        .description {
+            width: clamp(29ch, 90%, 60ch);
+            margin: 1.5em 0;
+        }
+
+        .gift-details {
+            display: grid;
+            grid-template-columns: min-content 1fr;
+            gap: 1em;
+            width: clamp(29ch, 80%, 60ch);
+            align-items: center;
+            border-top: 2px solid var(--background-grey);
+            border-bottom: 2px solid var(--background-grey);
+            padding: 1em 0;
+        }
+
+        .hoe-tevreden {
+            display: grid;
+            grid-template-columns: min-content min-content min-content 1fr;
+            grid-template-areas:
+            "straight happy surprised surprised-text"
+            "box1 box2 box3 doomed-text"
+            "box4 box5 box6 new-text"
+            ;
+            gap: 1em;
+            margin: 1em 0;
+
+            align-items: center;
+
+            .svg-box:nth-of-type(1) {
+                grid-area: box1;
+            }           
+
+            span {
+                &:nth-of-type(1) {
+                    grid-area: surprised-text;
+                }
+
+                &:nth-of-type(2) {
+                    grid-area: doomed-text;
+                }
+
+                &:nth-of-type(3) {
+                    grid-area: new-text;
+                }
+            }
+        }
+
+        .where-to-buy {
+            border-top: 2px solid var(--background-grey);
+            border-bottom: 2px solid var(--background-grey);
+            margin-bottom: 3em;
+
+            h3{
+                margin-top: 1em;
+            }
+
+            .buy-option {
+                border: 1px solid black;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                "img"
+                "title"
+                "store"
+                ;
+                width: 15.5em;
+                margin-bottom: 1em;
+
+                h3 {
+                    grid-area: title;
+                }
+
+                .svg-cart {
+                    grid-area: img;
+                    place-self: center;
+                }
+
+                img {
+                    grid-area: img;
+                }
+
+                span {
+                    grid-area: store;
+                    margin-top: 0.5em;
+                }
+            }
+        }
 
         .article-gift {
             margin-right: 1em;
-        }
-    }
-
-    h2 {
-        font-size: clamp(1.6rem, 5vw, 2.5rem);;
-    }
-
-    .add-to-bookmark {
-        display: flex;
-        align-items: center;
-        justify-self: end;
-        background-color: var(--background-dark);
-        color: var(--text-highlight);
-        border: none;
-        padding: 0.5em;
-        border-radius: 25px;
-        font-size: var(--fs-primary);
-
-        svg {
-            fill: var(--text-highlight);
-            margin: 0 0.5em;
-        }
-    }
-
-    .description {
-        width: clamp(29ch, 90%, 60ch);
-    }
-
-    .gift-details {
-        display: grid;
-        grid-template-columns: min-content 1fr;
-        gap: 1em;
-        width: clamp(29ch, 80%, 60ch);
-        align-items: center;
-        border-top: 2px solid var(--background-grey);
-        border-bottom: 2px solid var(--background-grey);
-        padding: 1em 0;
-    }
-
-    .hoe-tevreden {
-        display: grid;
-        grid-template-columns: min-content min-content min-content 1fr;
-        grid-template-areas:
-        "straight happy surprised surprised-text"
-        "box1 box2 box3 doomed-text"
-        "box4 box5 box6 new-text"
-        ;
-        gap: 1em;
-        margin: 1em 0;
-
-        align-items: center;
-
-        .svg-box:nth-of-type(1) {
-            grid-area: box1;
-        }           
-
-        span {
-            &:nth-of-type(1) {
-                grid-area: surprised-text;
-            }
-
-            &:nth-of-type(2) {
-                grid-area: doomed-text;
-            }
-
-            &:nth-of-type(3) {
-                grid-area: new-text;
-            }
-        }
-    }
-
-    .where-to-buy {
-        border-top: 2px solid var(--background-grey);
-        border-bottom: 2px solid var(--background-grey);
-        margin-bottom: 3em;
-
-        h3{
-            margin-top: 1em;
-        }
-
-        .buy-option {
-            border: 1px solid black;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-areas:
-            "img"
-            "title"
-            "store"
-            ;
-            width: 15.5em;
-            margin-bottom: 1em;
-
-            h3 {
-                grid-area: title;
-            }
-
-            .svg-cart {
-                grid-area: img;
-                place-self: center;
-            }
-
-            img {
-                grid-area: img;
-            }
-
-            span {
-                grid-area: store;
-                margin-top: 0.5em;
-            }
         }
     }
 }
