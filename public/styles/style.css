@@ -182,13 +182,34 @@ header {
 }
 
 .index-details {
+    display: flex;
+    flex-direction: column;
+
+    .img-carousel {
+        max-width: 30em;
+        margin: 0.5em;
+    }
+
+    .side-column {
+        margin: 0 0.5em;
+
+        .article-gift {
+            margin-right: 1em;
+        }
+    }
+
+    h2 {
+        font-size: clamp(1.6rem, 5vw, 2.5rem);;
+    }
+
     .add-to-bookmark {
         display: flex;
         align-items: center;
+        justify-self: end;
         background-color: var(--background-dark);
         color: var(--text-highlight);
         border: none;
-        padding: 1em;
+        padding: 0.5em;
         border-radius: 25px;
         font-size: var(--fs-primary);
 
@@ -199,14 +220,14 @@ header {
     }
 
     .description {
-        width: clamp(30ch, 90%, 60ch);
+        width: clamp(29ch, 90%, 60ch);
     }
 
     .gift-details {
         display: grid;
         grid-template-columns: min-content 1fr;
         gap: 1em;
-        width: clamp(30ch, 80%, 60ch);
+        width: clamp(29ch, 80%, 60ch);
         align-items: center;
         border-top: 2px solid var(--background-grey);
         border-bottom: 2px solid var(--background-grey);
