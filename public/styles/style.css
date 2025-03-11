@@ -73,26 +73,37 @@ header {
 .index-main {
     h2 {
         max-width: 12ch;
+        margin: 2em 0.5em 0 0.5em;
     }
 
     .search-bar {
         display: flex;
         align-items: center;
+        position: fixed;
+        bottom: 1em;
+        left: 50%;
+        transform: translateX(-50%);
 
         .svg-mic {
             position: relative;
             left: 4em;
+            scale: 0.6;
         }
 
         input {
             padding: 2.5em 1em;
-            width: 35em;
+            width: clamp(10em, 80vw, 37em);
             border-radius: 3.5em;
             border: 2px solid #C9C9C9;
 
             &::placeholder {
                 padding-left: 3em;
                 font-size: var(--fs-s);
+                opacity: 0;
+
+                @media (min-width: 600px) {
+                    opacity: 1;
+                }
             }
         }
 
@@ -105,10 +116,16 @@ header {
     .pictures-reviewers {
         display: flex;
         align-items: center;
+        margin-top: 2em;
 
         img {
-            width: clamp(2em, 30vw, 5em);
+            width: 5em;
             height: auto;
+
+            &:nth-of-type(1) {
+                position: relative;
+                right: 0;
+            }
 
             &:nth-of-type(2) {
                 position: relative;
@@ -127,7 +144,7 @@ header {
         }
 
         span {
-            font-size: var(--fs-s);
+            font-size: clamp(1.2rem, calc(1.5vw + 1rem), 1.75rem);
             position: relative;
             right: 6em;
         }
@@ -136,6 +153,12 @@ header {
     .container-gift {
         background-color: var(--background-secondary);
         border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        /* display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(22.5em, 1fr)); */
+        align-items: center;
+        margin-top: 3em;
 
         .article-login {
             display:grid;
@@ -148,8 +171,8 @@ header {
 
             border-radius: 21px;
             background-color: var(--background-grey);
-            height: 33em;
-            width: clamp(17em, 50vw, 23.5em);
+            height: auto;
+            width: clamp(18em, 50vw, 23.5em);
 
             h3 {
                 grid-area: title;
@@ -339,7 +362,6 @@ header {
       "saved-given"
     ;            
 
-    border: 1px solid black;
     background-color: white;
     width: clamp(18em, 50vw, 23.5em);
     margin-bottom: 1em;
