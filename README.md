@@ -22,6 +22,13 @@
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+De stukken HTML code die vaker herhaald worden op de website zijn in hun eigen liquid file geplaatst. dit is gedaan zodat het met liquid op de juiste plaat ingeladen kan worden. als er een aanpassing nodig is, in de HTML, dan wordt dat op maar 1 plek gedaan.
+voorbeeld van herhaalende code
+Deze article:
+https://github.com/vsheo/server-side-rendering-server-side-website/blob/791717c93a3c46a8ce76d2dc7e5d33fdc51b9932/views/partials/article-gift.liquid#L1-L8
+wordt op de volgende plekken gebruikt:
+https://github.com/vsheo/server-side-rendering-server-side-website/blob/791717c93a3c46a8ce76d2dc7e5d33fdc51b9932/views/index.liquid#L26-L29
+https://github.com/vsheo/server-side-rendering-server-side-website/blob/791717c93a3c46a8ce76d2dc7e5d33fdc51b9932/views/details.liquid#L61-L62
 
 ### Styleguide
 De huisstijl is gebaseerd op dit [figma design](https://www.figma.com/design/4NBbUuyXIrZ7VFHaDAHJLs/milledoni-design?node-id=6-23251&t=GgUuJZRB3GWeNTFB-1)
