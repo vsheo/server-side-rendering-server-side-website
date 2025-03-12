@@ -431,7 +431,7 @@ header {
 
     background-color: white;
     width: clamp(18em, 50vw, 17em);
-    margin-bottom: 1em;
+    margin: 1em 0 1em 0;
 
     /* de elementen in de article blijven binnen de grid */
     &> * {

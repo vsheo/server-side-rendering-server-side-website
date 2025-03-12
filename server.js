@@ -37,18 +37,24 @@ app.set('views', './views')
 app.get('/', async function (request, response) {
    // Render index.liquid uit de Views map
    // Geef hier eventueel data aan mee
-   const giftResponse = await fetch('https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,image,tags')
+   const giftResponse = await fetch('https://fdnd-agency.directus.app/items/milledoni_products/?fields=slug,name,image,tags')
    const giftResponseJSON = await giftResponse.json()
 
    response.render('index.liquid', {giftData: giftResponseJSON.data})
 })
 
 // details pagina
-app.get('/details', async function (request, response) {
-  const giftResponse = await fetch('https://fdnd-agency.directus.app/items/milledoni_products/?fields=name,image,description,url')
+app.get('/details/:slug', async function (request, response) {
+  // haal de slug op uit de url
+  const slug = request.params.slug;
+  // voeg de slug toe als filter
+  const giftURL = `https://fdnd-agency.directus.app/items/milledoni_products/?fields=slug,name,image,description,url&filter={"slug":"${slug}"}`
+  
+  // fetch de nieuwe filter
+  const giftResponse = await fetch(giftURL)
   const giftResponseJSON = await giftResponse.json()
 
-  response.render('details.liquid', {giftData: giftResponseJSON.data})
+  response.render('details.liquid', {giftData: giftResponseJSON.data[0]})
 })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
