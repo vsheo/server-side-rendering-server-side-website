@@ -39,8 +39,14 @@ header {
         background-color: var(--background-dark);
         color: var(--text-highlight);
         width: 2.5em;
+        padding: 0.5em 0;
         aspect-ratio: 1 / 1;
         font-size: var(--fs-s);
+
+        @media (min-width: 700px) {
+            width: 5.5em;
+            height: 2em;
+        }
 
         .text-desktop {
             display: none;
@@ -48,11 +54,16 @@ header {
             @media (min-width: 700px) {
                 display: block;
                 margin-right: 0.5em;
+                margin-left: 0.5em;
             }
         }
 
         svg {
             fill: var(--text-highlight);
+
+            @media (min-width: 700px) {
+                margin-right: 0.5em;
+            }
         }
 
         &:active {
