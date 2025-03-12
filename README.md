@@ -44,6 +44,20 @@ hier zijn de font-weight cuistom properties in css stylesheet
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+download de nieuwste versie van Node.js (https://nodejs.org/en) op je laptop/computer.
+fork deze repository, en clone het op je laptop.
+open de repository in  github.
+maak daarna de terminal in github open. en voer de volgende command uit:
+npm install
+als deze claar is kan je command
+npm start
+uitvoeren om de website op localhost op te starten.
+als het goed is gegaan dan krijg je in de terminal een link naar de juiste localhost port.
+als je hierop klikt dan open de website in de browser
+
+als je de website wilt stoppen dan kan je in de vscode terminal de command:
+"ctrl + c" 
+uitvoeren om de localhost te stoppen
 
 ## Bronnen
 
