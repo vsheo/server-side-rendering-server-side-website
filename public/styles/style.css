@@ -172,11 +172,13 @@ header {
     .container-gift {
         background-color: var(--background-secondary);
         border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        /* display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(22.5em, 1fr)); */
-        align-items: center;
+        /* display: flex;
+        flex-direction: column; */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(23em, 1fr));
+        gap: 1em;
+        place-content: center;
+        /* align-items: center; */
         margin-top: 3em;
 
         .article-login {
