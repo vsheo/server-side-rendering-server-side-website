@@ -70,7 +70,7 @@ Voor het grootste deel van de responsiveheid op de indexpagina heb ik een grid g
 Hiervoor heb ik in mijn grid-template-columns de functie repeat met auto-fit gebruikt om de kolommen te herhalen. Daarbij heb ik ook minmax toegepast om de minimale breedte te bepalen voordat er een nieuwe kolom wordt toegevoegd.
 https://github.com/vsheo/server-side-rendering-server-side-website/blob/7ac4e29f5be2bced1afadd0965dfd11c7088d742/public/styles/style.css#L219
 
-Dit heb ik gedaan zodat er automatisch een nieuwe kolom wordt gemaakt, waardoor er op hele grote schermen nooit te veel witruimte is.
+Dit heb ik gedaan om minder met mediaqueries te werken en om te veel witruimte op grote schermen te voorkomen, doordat er automatisch een nieuwe kolom wordt toegevoegd.
 
 De index pagina is responsief vanaf 320 pixels.
 ![responsive_320](https://github.com/user-attachments/assets/5e5238ab-f8fa-4796-85ed-0f4fb9b6628e)
