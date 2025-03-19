@@ -39,8 +39,14 @@ Deze article:
 https://github.com/vsheo/server-side-rendering-server-side-website/blob/791717c93a3c46a8ce76d2dc7e5d33fdc51b9932/views/partials/article-gift.liquid#L1-L8
 
 wordt op de volgende plekken gebruikt:
+op de index pagina
 https://github.com/vsheo/server-side-rendering-server-side-website/blob/791717c93a3c46a8ce76d2dc7e5d33fdc51b9932/views/index.liquid#L26-L29
+![dry-article-1](https://github.com/user-attachments/assets/b5ed7c84-1ea2-4a3d-a66f-4242404d8769)
+
+op de details pagina
 https://github.com/vsheo/server-side-rendering-server-side-website/blob/791717c93a3c46a8ce76d2dc7e5d33fdc51b9932/views/details.liquid#L61-L62
+![dry-article-2](https://github.com/user-attachments/assets/32471888-c280-41b6-8aa3-8955b8e8734e)
+
 
 ### Styleguide
 De huisstijl is gebaseerd op dit [figma design](https://www.figma.com/design/4NBbUuyXIrZ7VFHaDAHJLs/milledoni-design?node-id=6-23251&t=GgUuJZRB3GWeNTFB-1)
