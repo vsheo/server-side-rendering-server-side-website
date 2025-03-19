@@ -32,6 +32,7 @@ https://github.com/user-attachments/assets/09f1eb4c-3ea9-4da4-a661-1ba09cebf143
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+### liquid partials
 De stukken HTML-code die vaker herhaald worden op de website, zijn in een eigen Liquid file geplaatst. Dit is gedaan zodat ze met Liquid op de juiste plek ingeladen kunnen worden.
 Als er een aanpassing in de HTML nodig is, hoeft dit maar op één plek te gebeuren.
 Deze article:
